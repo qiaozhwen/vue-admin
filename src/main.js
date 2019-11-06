@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.css'
 import ElementUI from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/en'
+import 'element-ui/lib/theme-chalk/index.css'
 import store from './store/index'
 window.$ = $
 window.jQuery = $
@@ -17,7 +18,6 @@ Vue.config.productionTip = false
 Vue.use(ElementUI, { locale })
 // 页面权限判断
 router.beforeEach((to, from, next) => {
-  console.log('页面切换')
   next()
 })
 

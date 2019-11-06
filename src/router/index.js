@@ -15,12 +15,9 @@ export default new Router({
       name: 'login',
       component: resolve => require(['../views/login'], resolve)
     }
+    // {
+    //   path: '*',
+    //   redirect: '/login'
+    // }
   ]
 })
-export const DynamicRoutes = [
-  {
-    path: '/',
-    name: 'firstPage',
-    component: resolve => require(['../views/firstPage'], resolve)
-  }
-]

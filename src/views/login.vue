@@ -5,17 +5,17 @@
       <div class="form-horizontal">
         <div class="form-group">
           <div class="form-input">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="账号">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="账号" v-model="username">
           </div>
         </div>
         <div class="form-group">
           <div class="form-input">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="密码" v-model="password">
           </div>
         </div>
         <div class="form-group">
           <div class="form-input form-button">
-            <button type="button" class="btn btn-primary">登录</button>
+            <button type="button" class="btn btn-primary" @click="handleLogin">登录</button>
           </div>
         </div>
       </div>
@@ -24,8 +24,46 @@
 </template>
 
 <script>
+import loginApi from '../api/login'
 export default {
-  name: 'login'
+  name: 'login',
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    handleLogin () {
+      if (this.username === '' && this.password === '') {
+        this.$message({
+          message: '账号密码不可为空',
+          type: 'error'
+        })
+      } else {
+        loginApi.login(this.username, this.password).then(res => {
+          if (res.data.code === 200) {
+            this.$message({
+              message: '登录成功',
+              type: 'success'
+            })
+            this.$store.dispatch('addRoutes', {routes: res.data.data})
+          } else {
+            this.$message({
+              message: '账号或密码错误',
+              type: 'error'
+            })
+          }
+        }).catch(err => {
+          this.$message({
+            message: '账号或密码错误',
+            type: 'error'
+          })
+          console.log(err)
+        })
+      }
+    }
+  }
 }
 </script>
 <style scoped>
@@ -34,6 +72,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #2d3a4b;
+    z-index: -10;
   }
   .login-box{
     width: 30%;
