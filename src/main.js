@@ -4,20 +4,28 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $ from 'jquery'
-window.$ = $
-window.jQuery = $
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.css'
-import 'admin-lte/dist/css/skins/_all-skins.min.css'
-import 'admin-lte/dist/css/AdminLTE.min.css'
+import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/en'
+import store from './store/index'
+window.$ = $
+window.jQuery = $
 
 Vue.config.productionTip = false
+Vue.use(ElementUI, { locale })
+// 页面权限判断
+router.beforeEach((to, from, next) => {
+  console.log('页面切换')
+  next()
+})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
