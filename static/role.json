@@ -1,0 +1,48 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "role": "admin",
+    "authorities": [
+      {
+        "page": "firstPage",
+        "children": [
+          {
+            "page": "doctor",
+            "detail": [
+              "a-button",
+              "b-button",
+              "c-button"
+            ]
+          },
+          {
+            "page": "doctor2",
+            "detail": [
+              "a-button",
+              "b-button",
+              "c-button"
+            ],
+            "children": [
+              {
+                "page": "doctor2Detail",
+                "detail": [
+                  "a-button",
+                  "b-button",
+                  "c-button"
+                ]
+              }
+            ]
+          },
+          {
+            "page": "doctor3",
+            "detail": [
+              "a-button",
+              "b-button",
+              "c-button"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
