@@ -1,10 +1,10 @@
 <template>
-  <div>我是首页</div>
+    <div>医生1</div>
 </template>
 
 <script>
 export default {
-  name: 'firstPage'
+  name: 'doctor'
 }
 </script>
 

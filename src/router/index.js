@@ -5,10 +5,22 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'firstPage',
+    //   component: resolve => require(['../views/firstPage'], resolve)
+    // },
     {
-      path: '/',
-      name: 'firstPage',
-      component: resolve => require(['../views/firstPage'], resolve)
+      path: '/login',
+      name: 'login',
+      component: resolve => require(['../views/login'], resolve)
     }
   ]
 })
+export const DynamicRoutes = [
+  {
+    path: '/',
+    name: 'firstPage',
+    component: resolve => require(['../views/firstPage'], resolve)
+  }
+]
