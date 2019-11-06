@@ -2,7 +2,7 @@
 
 > A Vue.js project
 ## 运行截图
-![Image text](./images/login.png)
+![](./images/login.png)
 
 ## Build Setup
 
