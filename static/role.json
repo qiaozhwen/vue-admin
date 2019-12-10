@@ -3,12 +3,17 @@
   "message": "success",
   "data": {
     "role": "admin",
+    "token": "J435SADAfq65DkcKCZNK",
     "authorities": [
       {
         "page": "firstPage",
+        "path": "/",
+        "title": "首页",
         "children": [
           {
             "page": "doctor",
+            "path": "/doctor",
+            "title": "表格",
             "detail": [
               "a-button",
               "b-button",
@@ -17,24 +22,38 @@
           },
           {
             "page": "doctor2",
+            "path": "/doctor2",
+            "title": "表单",
             "detail": [
               "a-button",
               "b-button",
               "c-button"
-            ],
-            "children": [
-              {
-                "page": "doctor2Detail",
-                "detail": [
-                  "a-button",
-                  "b-button",
-                  "c-button"
-                ]
-              }
             ]
           },
           {
             "page": "doctor3",
+            "path": "/doctor3",
+            "title": "按钮",
+            "detail": [
+              "a-button",
+              "b-button",
+              "c-button"
+            ]
+          },
+          {
+            "page": "doctor4",
+            "path": "/doctor4",
+            "title": "单选多选",
+            "detail": [
+              "a-button",
+              "b-button",
+              "c-button"
+            ]
+          },
+          {
+            "page": "doctor5",
+            "path": "/doctor5",
+            "title": "输入框",
             "detail": [
               "a-button",
               "b-button",

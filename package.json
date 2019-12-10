@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
     "bootstrap": "^3.4.1",
     "element-ui": "^2.12.0",
     "font-awesome": "^4.7.0",

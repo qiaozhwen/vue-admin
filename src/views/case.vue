@@ -5,7 +5,7 @@
       <header-component></header-component>
       <transition name="slide-fade">
         <section>
-         <router-view></router-view>
+          <router-view></router-view>
         </section>
       </transition>
     </div>
@@ -16,17 +16,10 @@
 import sideBar from '../components/sidebar/sideBar'
 import header from '../components/header/header'
 export default {
-  name: 'firstPage',
+  name: 'case',
   data () {
     return {
     }
-  },
-  mounted () {
-    // this.$notify({
-    //   title: '成功',
-    //   message: '欢迎使用远程会诊系统',
-    //   type: 'success'
-    // })
   },
   components: {
     sideBar: sideBar,
@@ -51,5 +44,10 @@ export default {
     /* .slide-fade-leave-active for below version 2.1.8 */ {
     transform: translateX(10px);
     opacity: 0;
+  }
+  @media screen  and (max-width: 750px) {
+    .body-content{
+      margin-left: 56px;
+    }
   }
 </style>

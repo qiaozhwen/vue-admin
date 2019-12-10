@@ -33,8 +33,11 @@ export default {
       password: ''
     }
   },
+  mounted () {
+  },
   methods: {
     handleLogin () {
+      var that = this
       if (this.username === '' && this.password === '') {
         this.$message({
           message: '账号密码不可为空',
@@ -47,19 +50,13 @@ export default {
               message: '登录成功',
               type: 'success'
             })
-            this.$store.dispatch('addRoutes', {routes: res.data.data})
+            this.$store.dispatch('addRoutes', {routes: res.data.data, self: that, userName: that.username, password: that.password})
           } else {
             this.$message({
               message: '账号或密码错误',
               type: 'error'
             })
           }
-        }).catch(err => {
-          this.$message({
-            message: '账号或密码错误',
-            type: 'error'
-          })
-          console.log(err)
         })
       }
     }

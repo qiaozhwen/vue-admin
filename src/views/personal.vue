@@ -1,10 +1,10 @@
 <template>
-    <div>医生1</div>
+    <div>我的病理</div>
 </template>
 
 <script>
 export default {
-  name: 'doctor'
+  name: 'personal'
 }
 </script>
 
