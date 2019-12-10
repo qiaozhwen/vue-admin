@@ -17,9 +17,22 @@ window.jQuery = $
 Vue.config.productionTip = false
 Vue.use(ElementUI, { locale })
 // 页面权限判断
-router.beforeEach((to, from, next) => {
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   if (store.state.token) {
+//     if (!store.state.uid) {
+//       store.commit('setUid')
+//       // 请求路由信息
+//       store.dispatch('getRoutes', {username: store.state.username, password: store.state.password})
+//     }
+//     next()
+//   } else {
+//     if (to.path === '/login') {
+//       next()
+//     } else {
+//       next('/login')
+//     }
+//   }
+// })
 
 /* eslint-disable no-new */
 new Vue({
